@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>index</title>
+</head>
+<header>
+    <div class="grid-container">
+        <div class="grid-item" style="background-color: rgb(206, 206, 99); text-align: center;">
+            <h1 style="font-family:'Lucida Sans'; color: rgb(37, 81, 37);">
+                GREEN GARDEN CROPS AND SEEDS
+            </h1>
+        </div>
+        <div class="grid-item">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="order.html">Order Online</a>
+            <a href="contact.html">Contact Us</a>
+            <div class="btn-row">
+                <div>
+                <a id="btn"> View Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" id="myButton" style="cursor: pointer; background-color: rgb(206, 206, 99); text-align: center;">
+                <h3 style="font-family:'Lucida Sans'; color: rgb(37, 81, 37);"><br>JOIN US !</h3>
+        </div>
+    </div>
+    <div id="cartContainer">
+        <div class="row">
+            <div style="margin-left: 230px;" id="close-button">close</div>
+            <h3>these items are inside your cart</h3>
+        </div>
+        <div class="message">
+            
+        </div>
+        <div class="row" style="margin-top: 30px;">
+        <a style="background-color: #212d84; color: #fff; padding: 15px;
+        border: none; border-radius: 4px; cursor: pointer;" href="order.html">Buy Now</a>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="row" style="color: #ccc; margin-left:630px;margin-right:620px;">
+        <h1>OUR PRODUCTS</h1>
+    </div>
+    <section class="container">
+        <div class="product">
+            <img src="corn.jpg" alt="Product 1">
+            <div class="product-info">
+                <h3>Sweetcorn Cob</h3>
+                <p>Price: &#x20B1; 20.00</p>
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart-button" onclick="addToCart('Sweetcorn Cob', 20.00, 'quantity1')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="ricegrain.jpg" alt="Product 2">
+            <div class="product-info">
+                <h3>Rice Grain</h3>
+                <p>Price: &#x20B1; 70.00</p>
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart-button" onclick="addToCart('Rice Grain', 70.00, 'quantity2')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="soybeans.jpg" alt="Product 3">
+            <div class="product-info">
+                <h3>Soy Bean</h3>
+                <p>Price: &#x20B1; 90.00</p>
+                <label for="quantity3">Quantity:</label>
+                <input type="number" id="quantity3" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart-button" onclick="addToCart('Soy Bean', 90.00, 'quantity3')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="sugarcane.jpg" alt="Product 4">
+            <div class="product-info">
+                <h3>Sugar Cane</h3>
+                <p>Price: &#x20B1; 100.00</p>
+                <label for="quantity4">Quantity:</label>
+                <input type="number" id="quantity4" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart-button" onclick="addToCart('Sugar Cane', 100.00, 'quantity4')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <section class="container" style="background-color: #ccc;"> 
+        <div class="text-column">
+            <div style="color: #272727; margin-left:530px; margin-right: 530px;" class="row">
+                <h1 style="font-size: 35px;">OUR MILLED PRODUCTS</h1>
+            </div>
+            <div class="container">
+                <div class="product">
+                    <img src="miiledRice.jpg" alt="Product 5">
+                    <div class="product-info">
+                        <h3>Milled Rice</h3>
+                        <p>Price: &#x20B1; 95.00</p>
+                        <label for="quantity5">Quantity:</label>
+                        <input type="number" id="quantity5" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-button" onclick="addToCart('Milled Rice', 95.00, 'quantity5')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="milledCorn.jpg" alt="Product 6">
+                    <div class="product-info">
+                        <h3>Milled Corn</h3>
+                        <p>Price: &#x20B1; 45.00</p>
+                        <label for="quantity6">Quantity:</label>
+                        <input type="number" id="quantity6" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-button" onclick="addToCart('Milled Corn', 45.00, 'quantity6')">Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+
+
+        </div>
+    </section>
+    <section class="container" style="background-color: rgb(225, 184, 191);"> 
+        <div class="text-column">
+            <div style="color: #272727; margin-left:530px; margin-right: 530px;" class="row">
+                <h1 style="font-size: 35px;">OUR SACKED PRODUCTS</h1>
+            </div>
+            <div class="container">
+                <div class="product">
+                    <img src="ricesacks.jpg" alt="Product 7">
+                    <div class="product-info">
+                        <h3>Rice Sack</h3>
+                        <p>Price: &#x20B1; 2,500.00</p>
+                        <label for="quantity7">Quantity:</label>
+                        <input type="number" id="quantity7" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-button" onclick="addToCart('Rice Sack', 2500.00, 'quantity7')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="cornSacks.jpg" alt="Product 8">
+                    <div class="product-info">
+                        <h3>Corn Sack</h3>
+                        <p>Price: &#x20B1; 1,250.00</p>
+                        <label for="quantity8">Quantity:</label>
+                        <input type="number" id="quantity8" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-button" onclick="addToCart('Corn Sack', 1250.00, 'quantity8')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="soybeanSack.jpg" alt="Product 9">
+                    <div class="product-info">
+                        <h3>Soybean Sack</h3>
+                        <p>Price: &#x20B1; 2,600.00</p>
+                        <label for="quantity9">Quantity:</label>
+                        <input type="number" id="quantity9" class="quantity-input" value="1" min="1">
+                        <button class="add-to-cart-button" onclick="addToCart('Soybean Sack', 2600.00, 'quantity9')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+</body>
+<footer>
+    <section class="container" style="padding: 20px; font-size: 20px; text-align: justify; font-family: monospace;
+    margin-top: 20px;; background-color: #ccc; margin-left:100px; margin-right:100px;">
+        <div class="text-column">
+            <b>
+            <p style="border-right: 1px solid #000;">
+                Tabu, Ilog, Negros Occidental<br>
+                Masagana, @ Espallardo Residence<br>
+                Email: espallardolyzander@gmail.com<br>
+                Contact: +639109630592<br>
+                FB: Lyzander Espallardo
+            </p>
+        </div>
+        <div class="text-column">
+            <p style="padding-right: 35px; border-right: 1px solid #000;">
+                Operating Hours<br><br>
+                Mon-Fri: 8:00 am - 8:00 pm<br>
+                Saturday: 9:00 am - 7:00 pm<br>
+                Sunday: 9:00 am - 5:00 pm
+            </p>
+        </div>
+        <div class="text-column">
+            <p>
+                Delivery Hours<br><br>
+                Mondays: 8:00 am - 1:00 pm<br>
+                Wednesdays: 8:00 am - 1:00 pm<br>
+                Fridays: 8:00 am - 1:00 pm
+            </p>
+        </b>
+        </div>
+    </section>
+    <section class="container" style="margin: 20px; font-size: 30px; color:rgb(206, 206, 99); margin-left:100px; margin-right:100px; text-align: center;">
+        <div class="text-column" style="border-right: 1px solid rgb(206, 206, 99);">
+            Facebook
+            <p style="color:rgb(199, 199, 199); font-size: 20px;">Lyzander Espallardo</p>
+        </div>
+        <div class="text-column" style="border-right: 1px solid rgb(206, 206, 99);">
+            Gmail
+            <p style="color:rgb(199, 199, 199); font-size: 20px;">espallardolyzander@gmail.com</p>
+        </div>
+        <div class="text-column">
+            Contact #
+            <p style="color:rgb(199, 199, 199); font-size: 20px;">+639109630592</p>
+        </div>
+    </section>
+</footer>
+<script src="function.js"></script>
+</html>

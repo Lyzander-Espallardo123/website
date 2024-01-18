@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>index</title>
+</head>
+<header>
+    <div class="grid-container">
+        <div class="grid-item" style="background-color: rgb(206, 206, 99); text-align: center;">
+            <h1 style="font-family:'Lucida Sans'; color: rgb(37, 81, 37);">
+                GREEN GARDEN CROPS AND SEEDS
+            </h1>
+        </div>
+        <div class="grid-item">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="order.html">Order Online</a>
+            <a href="contact.html">Contact Us</a>
+            <div class="btn-row">
+                <div>
+                
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" id="myButton" style="cursor: pointer; background-color: rgb(206, 206, 99); text-align: center;">
+                <h3 style="font-family:'Lucida Sans'; color: rgb(37, 81, 37);"><br>JOIN US !</h3>
+        </div>
+    </div>
+</header>
+<body>
+    <section class="container" style="background-size: cover; background-repeat: none; background-image: url(background.jpg);">
+        <div class="column" style="font-size: xx-large;">
+            <h1 style="text-align: left; color: #ccc; font-size: 100px;">Welcome to Green Garden</h1>
+            <h4 style="text-align: left; color: white; text-shadow: -1px -1px 0 #474646, 1px -1px 0 #474646, 
+            -1px 1px 0 #474646, 1px 1px 0 #474646;">Your One Stop Destination for Crops<br>and Seeds Supplies</h4>
+        </div>
+
+    </section>
+    <section style="background-color: rgb(241, 232, 234); display: grid; border: 1px solid #ccc;">
+        <div class="container">  
+            <div class="text-column" style="color: #262626; font-family: monospace; text-align: justify; margin-left: 30px; margin-right: 200px;">
+                <h1 style="text-align: left; font-size: 40px;">
+                Join Our Community of<br>Crops Planters Partnership</h1>
+                <p style="font-size: 21px;">Are you passionate about sustainable agriculture
+                 and making a positive impact on our environment? Look 
+                 no further! We invite you to become a valuable member 
+                 of our vibrant community of crops planters.</p>
+                 <h3 style="font-size: 30px;"> Green Garden - Growing Together, Sustaining Tomorrow! </h3>
+                 <br>
+                 <a style="padding: 10px; font-size: 20px; color: rgb(206, 206, 99); 
+                 background-color:rgb(37, 81, 37); margin-left: 230px; border-radius: 10px;" href="contact.html#targetSection">Join Us</a>
+            </div>
+            <div class="text-column">
+               <img src="farm.png" alt="farm-pic">
+            </div>
+        </div>
+    </section>
+    <section class="container" style="background-color: rgb(225, 184, 191); display: grid; border: 1px solid #ccc;"> 
+            <div class="row" style="font-family: monospace; margin-left: 460px; margin-right: 460px;">
+                <h1 style="color:#262626; font-size: 30px; text-align: left; margin-top: 50px;">
+                    Shop Our Wide Range<br> of Products
+                </h1>
+            </div>
+            <div class="row" style=" margin-left: 200px; margin-right: 200px;">
+                <div class="carousel-container">
+                    <div class="carousel-image">
+                    <img src="corn.jpg" alt="Image 1">
+                    <h3>Sweet Corn</h3>
+                    <p>&#x20B1; 20.00</p>
+                    </div>
+                    <div class="carousel-image">
+                    <img src="ricegrain.jpg" alt="Image 2">
+                    <h3>Rice Grain</h3>
+                    <p>&#x20B1; 70.00/Kilo</p>
+                    </div>
+                    <div class="carousel-image">
+                    <img src="sugarcane.jpg" alt="Image 3">
+                    <h3>Sugar Cane</h3>
+                    <p>&#x20B1; 100.00/bundle</p>
+                    </div>
+                    <div class="carousel-image">
+                    <img src="soybeans.jpg" alt="Image 4">
+                    <h3>Soy Beans</h3>
+                    <p>&#x20B1; 90.00</p>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <div class="carousel-control" onclick="prevImage()">&#10094;</div>
+                        <div class="carousel-control" onclick="nextImage()">&#10095;</div>
+                    </div>
+                    <div class="carousel-dots">
+                        <div class="carousel-dot" onclick="selectDot(0)"></div>
+                        <div class="carousel-dot" onclick="selectDot(1)"></div>
+                        <div class="carousel-dot" onclick="selectDot(2)"></div>
+                        <div class="carousel-dot" onclick="selectDot(3)"></div>
+                    </div>  
+                </div>
+            </div>
+            <div style="padding: 20px;" class="row">
+                <a style="padding: 10px; font-size: 20px; color: rgb(206, 206, 99); 
+         background-color:rgb(37, 81, 37); border-radius: 10px;" href="order.html">Shop Now</a>
+            </div> 
+    </section>
+</body>
+<script>
+    let currentImage = 0;
+
+function nextImage() {
+    currentImage = (currentImage + 1) % 4;
+    showImage(currentImage);
+}
+
+function prevImage() {
+    currentImage = (currentImage - 1 + 4) % 4;
+    showImage(currentImage);
+}
+
+function selectDot(dotIndex) {
+    currentImage = dotIndex;
+    showImage(currentImage);
+}
+
+function showImage(imageIndex) {
+    let carouselImages = document.getElementsByClassName('carousel-image');
+    for (let i = 0; i < carouselImages.length; i++) {
+        carouselImages[i].style.display = 'none';
+    }
+    carouselImages[imageIndex].style.display = 'block';
+
+    let carouselDots = document.getElementsByClassName('carousel-dot');
+    for (let i = 0; i < carouselDots.length; i++) {
+        carouselDots[i].classList.remove('active');
+    }
+    carouselDots[imageIndex].classList.add('active');
+}
+
+showImage(currentImage);
+</script>
+<footer>
+    <section class="container" style="padding: 20px; font-size: 20px; text-align: justify; font-family: monospace;
+    margin-top: 20px;; background-color: #ccc; margin-left:100px; margin-right:100px;">
+        <div class="text-column">
+            <b>
+            <p style="border-right: 1px solid #000;">
+                Tabu, Ilog, Negros Occidental<br>
+                Masagana, @ Espallardo Residence<br>
+                Email: espallardolyzander@gmail.com<br>
+                Contact: +639109630592<br>
+                FB: Lyzander Espallardo
+            </p>
+        </div>
+        <div class="text-column">
+            <p style="padding-right: 35px; border-right: 1px solid #000;">
+                Operating Hours<br><br>
+                Mon-Fri: 8:00 am - 8:00 pm<br>
+                Saturday: 9:00 am - 7:00 pm<br>
+                Sunday: 9:00 am - 5:00 pm
+            </p>
+        </div>
+        <div class="text-column">
+            <p>
+                Delivery Hours<br><br>
+                Mondays: 8:00 am - 1:00 pm<br>
+                Wednesdays: 8:00 am - 1:00 pm<br>
+                Fridays: 8:00 am - 1:00 pm
+            </p>
+        </b>
+        </div>
+    </section>
+    <section class="container" style="margin: 20px; font-size: 30px; color:rgb(206, 206, 99); margin-left:100px; margin-right:100px; text-align: center;">
+        <div class="text-column" style="border-right: 1px solid rgb(206, 206, 99);">
+            Facebook
+            <p style="color:rgb(199, 199, 199); font-size: 20px;">Lyzander Espallardo</p>
+        </div>
+        <div class="text-column" style="border-right: 1px solid rgb(206, 206, 99);">
+            Gmail
+            <p style="color:rgb(199, 199, 199); font-size: 20px;">espallardolyzander@gmail.com</p>
+        </div>
+        <div class="text-column">
+            Contact #
+            <p style="color:rgb(199, 199, 199); font-size: 20px;">+639109630592</p>
+        </div>
+    </section>
+</footer>
+</html>

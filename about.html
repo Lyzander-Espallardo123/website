@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>index</title>
+</head>
+<header>
+    <div class="grid-container">
+        <div class="grid-item" style="background-color: rgb(206, 206, 99); text-align: center;">
+            <h1 style="font-family:'Lucida Sans'; color: rgb(37, 81, 37);">
+                GREEN GARDEN CROPS AND SEEDS
+            </h1>
+        </div>
+        <div class="grid-item">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="order.html">Order Online</a>
+            <a href="contact.html">Contact Us</a>
+            <div class="btn-row">
+                <div>
+        
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" id="myButton" style="cursor: pointer; background-color: rgb(206, 206, 99); text-align: center;">
+                <h3 style="font-family:'Lucida Sans'; color: rgb(37, 81, 37);"><br>JOIN US !</h3>
+        </div>
+    </div>
+</header>
+<body>
+    <section class="container" style="height: 700px; background-size: cover; background-repeat: none; background-image: url(copFarm.png);">
+ 
+    </section>
+    <section style="background-color: rgb(241, 232, 234); display: grid; border: 1px solid #ccc;">
+        <div class="container">  
+            <div class="text-column" style="color: #262626; font-family:sans-serif; text-align: justify; margin-left:100px; margin-right:100px;">
+                <h1 style="text-align: left; font-size: 40px;">
+                Our Story</h1>
+                <p style="font-size: 21px;">In a picturesque village surrounded by rolling hills, a group of
+                farmers embarked on a journey to transform their land into a vibrant green garden.<br> Armed with 
+                heirloom seeds, whispered stories, and a love for the earth, they carefully planted the magic within those seeds.
+                The village soon echoed with the hum of bees and the rustle of leaves as the first sprouts emerged, reaching towards 
+                the sun. Embracing sustainable practices, the farmers nurtured their crops with patience, creating a sanctuary for 
+                biodiversity.The green garden became a source of inspiration, attracting neighboring villages.<br> The farmers shared 
+                their knowledge, exchanging seeds and stories. Over generations, the quaint village blossomed into a thriving 
+                community, a testament to the magical connection between farmers, seeds, and the earth—a legacy of harmony and 
+                abundance.</p>
+            </div>
+            <div class="text-column" style="background-color:rgb(37, 81, 37);;">
+               <img src="farm.png" alt="farm-pic">
+            </div>
+        </div>
+    </section>
+    <section class="container" style="background-color: rgb(225, 184, 191); display: grid; border: 1px solid #ccc;"> 
+        <div class="row">
+            <div id="imageContainer">
+                <div id="imageSlider">
+                    <img class="image" src="founder.jpg" alt="Image 1">
+                    <img class="image" src="founder1.jpg" alt="Image 2">
+                    <img class="image" src="founder2.jpg" alt="Image 3">
+                    <img class="image" src="riceField.jpg" alt="Image 1">
+                    <img class="image" src="ricefield1.jpg" alt="Image 2">
+                    <img class="image" src="harvest.jpg" alt="Image 3">
+                </div>
+            </div>
+        </div>    
+    </section>
+</body>
+<script>
+const imageSlider = document.getElementById('imageSlider');
+        let currentIndex = 0;
+    
+        function slideImages() {
+            currentIndex = (currentIndex + 1) % document.querySelectorAll('.image').length;
+            const translateValue = -currentIndex * 100 + '%';
+            imageSlider.style.transform = 'translateX(' + translateValue + ')';
+        }
+        setInterval(slideImages, 3000);
+</script>
+<footer>
+    <section class="container" style="padding: 20px; font-size: 20px; text-align: justify; font-family: monospace;
+    margin-top: 20px;; background-color: #ccc; margin-left:100px; margin-right:100px;">
+        <div class="text-column">
+            <b>
+            <p style="border-right: 1px solid #000;">
+                Tabu, Ilog, Negros Occidental<br>
+                Masagana, @ Espallardo Residence<br>
+                Email: espallardolyzander@gmail.com<br>
+                Contact: +639109630592<br>
+                FB: Lyzander Espallardo
+            </p>
+        </div>
+        <div class="text-column">
+            <p style="padding-right: 35px; border-right: 1px solid #000;">
+                Operating Hours<br><br>
+                Mon-Fri: 8:00 am - 8:00 pm<br>
+                Saturday: 9:00 am - 7:00 pm<br>
+                Sunday: 9:00 am - 5:00 pm
+            </p>
+        </div>
+        <div class="text-column">
+            <p>
+                Delivery Hours<br><br>
+                Mondays: 8:00 am - 1:00 pm<br>
+                Wednesdays: 8:00 am - 1:00 pm<br>
+                Fridays: 8:00 am - 1:00 pm
+            </p>
+        </b>
+        </div>
+    </section>
+    <section class="container" style="margin: 20px; font-size: 30px; color:rgb(206, 206, 99); margin-left:100px; margin-right:100px; text-align: center;">
+        <div class="text-column" style="border-right: 1px solid rgb(206, 206, 99);">
+            Facebook
+            <p style="color:rgb(199, 199, 199); font-size: 20px;">Lyzander Espallardo</p>
+        </div>
+        <div class="text-column" style="border-right: 1px solid rgb(206, 206, 99);">
+            Gmail
+            <p style="color:rgb(199, 199, 199); font-size: 20px;">espallardolyzander@gmail.com</p>
+        </div>
+        <div class="text-column">
+            Contact #
+            <p style="color:rgb(199, 199, 199); font-size: 20px;">+639109630592</p>
+        </div>
+    </section>
+</footer>
+<script src="function.js"></script>
+</html>
